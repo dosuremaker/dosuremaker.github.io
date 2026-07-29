@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zhongshuo Du - Homepage</title>
+<meta name="description" content="Zhongshuo Du — Algorithm Researcher in AIGC, 3D Vision and Geometry Processing. Co-Founder of SynWorld, formerly MiHoYo & Tencent.">
+<style>
+  :root {
+    --text: #222;
+    --muted: #666;
+    --link: #1a4a8a;
+    --rule: #ddd;
+    --accent: #8a1a1a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", "Songti SC", serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #fdfdfc;
+  }
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .header { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 8px; }
+  .header img {
+    width: 160px; height: 160px; object-fit: cover;
+    border-radius: 4px; flex-shrink: 0;
+  }
+  .header h1 { margin: 0 0 4px; font-size: 30px; font-weight: normal; }
+  .header .role { color: var(--muted); margin: 0 0 12px; font-style: italic; }
+  .header p { margin: 0 0 10px; }
+  .links { margin-top: 10px; font-size: 15px; }
+  .links a { margin-right: 14px; white-space: nowrap; }
+
+  h2 {
+    font-size: 21px; font-weight: normal;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin: 44px 0 18px;
+  }
+  h3.group {
+    font-size: 16px; color: var(--muted);
+    font-weight: normal; font-style: italic;
+    margin: 26px 0 10px;
+  }
+
+  /* Projects */
+  .project { margin-bottom: 20px; }
+  .project .title { font-weight: bold; }
+  .project .meta { color: var(--muted); font-size: 14px; }
+  .project .desc { margin: 4px 0 4px; }
+  .tags { font-size: 13px; color: var(--muted); }
+  .tags span {
+    display: inline-block; border: 1px solid var(--rule);
+    border-radius: 3px; padding: 0 6px; margin: 2px 4px 2px 0;
+    background: #f7f7f5;
+  }
+
+  /* Experience / Education */
+  .entry { margin-bottom: 16px; }
+  .entry .top { display: flex; justify-content: space-between; flex-wrap: wrap; }
+  .entry .org { font-weight: bold; }
+  .entry .time { color: var(--muted); font-size: 14px; }
+  .entry .role { font-style: italic; color: var(--muted); font-size: 15px; }
+  .entry ul { margin: 6px 0 0; padding-left: 20px; }
+  .entry li { margin-bottom: 3px; }
+
+  /* Publications */
+  .pub { margin-bottom: 14px; }
+  .pub .venue { font-style: italic; }
+  .me { font-weight: bold; text-decoration: underline; text-underline-offset: 3px; }
+  .pub .plinks a { margin-right: 8px; font-size: 13px; }
+
+  /* Experience timeline (icon on top, text below) */
+  .timeline {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 24px 8px; margin-top: 22px;
+  }
+  .tl-item { flex: 1 1 128px; max-width: 150px; text-align: center; }
+  .tl-logo { height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .tl-logo img { max-height: 44px; max-width: 100%; }
+  .tl-mono {
+    font-family: Georgia, serif; font-weight: bold; font-size: 19px;
+    letter-spacing: 1px; border: 1.5px solid var(--text); border-radius: 8px;
+    padding: 9px 12px; line-height: 1; color: var(--text);
+  }
+  .tl-mono.sm { font-size: 13px; letter-spacing: 0.5px; padding: 8px 10px; }
+  .tl-time { font-weight: bold; font-size: 14px; }
+  .tl-org { font-size: 14px; }
+  .tl-role { font-size: 13px; color: var(--muted); font-style: italic; }
+
+  /* Awards & skills */
+  ul.plain { padding-left: 20px; margin: 0; }
+  ul.plain li { margin-bottom: 4px; }
+  .skills td { padding: 2px 16px 2px 0; vertical-align: top; }
+  .skills td:first-child { color: var(--muted); white-space: nowrap; }
+
+  footer { margin-top: 60px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 12px; }
+
+  @media (max-width: 640px) {
+    .header { flex-direction: column; align-items: center; text-align: center; }
+    .entry .top { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ============ Header ============ -->
+  <div class="header">
+    <img src="images/suremaker.jpg" alt="Zhongshuo Du">
+    <div>
+      <h1>Zhongshuo Du</h1>
+      <p class="role">Algorithm Researcher &middot; Co-Founder of SynWorld</p>
+      <p>
+        I build production-grade AIGC and 3D systems. Alumnus of the
+        <b>State Key Lab of CAD&amp;CG, Zhejiang University</b>, with 4+ years of experience in
+        <b>AIGC, 3D Vision and Geometry Processing</b>. I have a proven track record at
+        <b>MiHoYo</b> and <b>Tencent</b> shipping production-ready pipelines for 3D asset
+        generation and automated scene synthesis, and I focus on bridging cutting-edge research in
+        <b>Spatial Intelligence &amp; Generative Modeling</b> with scalable engineering solutions.
+      </p>
+      <div class="links">
+        <a href="mailto:dosuremaker@zju.edu.cn">dosuremaker@zju.edu.cn</a>
+        <a href="mailto:dosuremaker@gmail.com">dosuremaker@gmail.com</a>
+        <a href="https://github.com/dosuremaker">[GitHub]</a>
+        <a href="files/CV_ZhongshuoDu.pdf">[CV]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Projects ============ -->
+  <h2>Selected Projects</h2>
+
+  <h3 class="group">Startup — SynWorld (Co-Founder, 2025 – Present)</h3>
+
+  <div class="project">
+    <div class="title">FizzReel: Controllable Video Reimagine Platform</div>
+    <div class="meta">SynWorld &middot; Jun. 2025 – Feb. 2026</div>
+    <div class="desc">
+      A video replication platform focusing on high-precision camera motion replication,
+      integrating Uni3C technology on the Wan2.2 model. Architected a modular backend workflow
+      based on ComfyUI, supporting automated pipelines from reference video parsing to structured generation.
+    </div>
+    <div class="tags"><span>Wan2.2</span><span>Uni3C</span><span>ComfyUI</span><span>Video Diffusion</span><span>Camera Control</span></div>
+  </div>
+
+  <h3 class="group">Industry — MiHoYo, T1 Graphics Group (2022 – 2025) &amp; Tencent TiMi (2021)</h3>
+
+  <div class="project">
+    <div class="title">Multimodal LLM-driven 3D Scene Layout &amp; Synthesis</div>
+    <div class="meta">MiHoYo &middot; Jan. 2025 – Jun. 2025</div>
+    <div class="desc">
+      Integrated GPT-4V, GroundingDINO, SAM and MoGe for component detection and depth extraction
+      from concept art, generating structured layouts after Manhattan World coordinate alignment.
+      Built a Blender synthesizer via MCP / Python API for automated placement — combining VLM-based
+      asset retrieval, Claude for spatial reasoning, and an AIGC-3D generative fallback —
+      significantly accelerating Level Artist workflows.
+    </div>
+    <div class="tags"><span>GPT-4V</span><span>SAM</span><span>GroundingDINO</span><span>MoGe</span><span>Blender MCP</span><span>Agentic Pipeline</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">AIGC-3D Mesh &amp; Topology Optimization</div>
+    <div class="meta">MiHoYo &middot; Jun. 2024 – Dec. 2024</div>
+    <div class="desc">
+      A patch-based segmentation pipeline using Watershed and Graph-Cut to smooth boundaries of raw
+      meshes generated from concept art via the CLAY model, plus a wireframe interaction tool based on
+      CGAL half-edge structures to produce production-ready quad-dominant meshes.
+    </div>
+    <div class="tags"><span>CLAY</span><span>Graph-Cut</span><span>CGAL</span><span>Quad Meshing</span><span>Geometry Processing</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">3D Stylized Stone Generation System</div>
+    <div class="meta">MiHoYo &middot; Oct. 2022 – Jun. 2024</div>
+    <div class="desc">
+      A multi-view stylized image generation pipeline using LoRA-tuned Stable Diffusion controlled by
+      ControlNet / T2I-Adapter, with an inpainting-based strategy for strict multi-view consistency.
+      Leveraged GANs for precise normal map estimation, and reconstructed high-poly stylized assets via
+      density-adaptive large-steps differentiable rendering with continuous remeshing.
+    </div>
+    <div class="tags"><span>Stable Diffusion</span><span>LoRA</span><span>ControlNet</span><span>Differentiable Rendering</span><span>GAN</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">LOD Visibility Weight and Culling</div>
+    <div class="meta">MiHoYo &middot; Jun. 2022 – Oct. 2022</div>
+    <div class="desc">
+      Enhanced the QEM-based LOD algorithm with visibility weights and culling logic to intelligently
+      control polygon reduction priority for large-scale scenes.
+    </div>
+    <div class="tags"><span>QEM</span><span>LOD</span><span>High-Performance Graphics</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">PCG Scene Generation</div>
+    <div class="meta">Tencent TiMi &middot; Jun. 2021 – Aug. 2021</div>
+    <div class="desc">
+      Graph-based layout generation with transformers for automated indoor scene object placement
+      and orientation.
+    </div>
+    <div class="tags"><span>GNN</span><span>Transformer</span><span>Procedural Generation</span></div>
+  </div>
+
+  <h3 class="group">Academic — State Key Lab of CAD&amp;CG, Zhejiang University</h3>
+
+  <div class="project">
+    <div class="title">Teeth Alignment Prediction in Videos</div>
+    <div class="meta">ZJU &middot; Sep. 2021 – Mar. 2022</div>
+    <div class="desc">
+      U-Net tooth segmentation followed by frame-by-frame pose fitting of 3D orthodontic models;
+      a spatio-temporal VAE-GAN with FlowNet motion warping synthesizes high-fidelity, temporally
+      stable orthodontic preview videos.
+    </div>
+    <div class="tags"><span>VAE-GAN</span><span>FlowNet</span><span>Video Synthesis</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">Single-view 3D Hair Generation</div>
+    <div class="meta">ZJU &middot; Dec. 2020 – Jun. 2021</div>
+    <div class="desc">
+      A Voxel-UNet architecture predicting 3D occupancy and orientation fields from monocular images;
+      polystrip hair models generated by iteratively growing strands along the predicted orientation field.
+    </div>
+    <div class="tags"><span>Voxel-UNet</span><span>Single-view Reconstruction</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">Mesh Reconstruction from Noisy Point Clouds</div>
+    <div class="meta">ZJU &middot; Mar. 2019 – Nov. 2020 &middot; published in ACM TOG</div>
+    <div class="desc">
+      Geometric features extracted via Normal Tensor Voting and converted into graph representations;
+      a GCN cascade-predicts guided normals for iterative vertex updates.
+      Published in <b>ACM Transactions on Graphics</b>.
+    </div>
+    <div class="tags"><span>GCN</span><span>Mesh Denoising</span><span>ACM TOG</span></div>
+  </div>
+
+  <div class="project">
+    <div class="title">Hand Tracking and 3D Scene Interaction</div>
+    <div class="meta">ZJU &middot; Jul. 2018 – Oct. 2018</div>
+    <div class="desc">
+      Real-time hand pose regression from 3D point clouds using PointNet with fingertip refinement;
+      a Unity interaction system for Leap Motion enabling natural hand-to-virtual-scene interaction.
+    </div>
+    <div class="tags"><span>PointNet</span><span>Unity</span><span>Real-time</span></div>
+  </div>
+
+  <!-- ============ Experience ============ -->
+  <h2>Experience</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-logo"><span class="tl-mono">ZJU</span></div>
+      <div class="tl-time">2015 – 2019</div>
+      <div class="tl-org">Zhejiang University</div>
+      <div class="tl-role">B.Eng.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-logo"><span class="tl-mono sm">CAD&amp;CG</span></div>
+      <div class="tl-time">2019 – 2022</div>
+      <div class="tl-org">SKL of CAD&amp;CG, ZJU</div>
+      <div class="tl-role">M.Eng. / Researcher</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-logo"><img src="images/tencent.png" alt="Tencent"></div>
+      <div class="tl-time">2021</div>
+      <div class="tl-org">Tencent TiMi</div>
+      <div class="tl-role">AI Research Intern</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-logo"><img src="images/mihoyo.png" alt="miHoYo"></div>
+      <div class="tl-time">2022 – 2025</div>
+      <div class="tl-org">miHoYo (T1 Graphics)</div>
+      <div class="tl-role">Graphics Algorithm Researcher</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-logo"><span class="tl-mono sm">SynWorld</span></div>
+      <div class="tl-time">2025</div>
+      <div class="tl-org">SynWorld</div>
+      <div class="tl-role">Co-Founder</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-logo"><span class="tl-mono sm">Artstrio</span></div>
+      <div class="tl-time">Present</div>
+      <div class="tl-org">Artstrio</div>
+      <div class="tl-role">CTO</div>
+    </div>
+  </div>
+
+  <!-- ============ Publications ============ -->
+  <h2>Selected Publications</h2>
+
+  <div class="pub">
+    Zekai Gu, Shuoxuan Feng, Yansong Wang, Hanzhuo Huang, <span class="me">Zhongshuo Du</span>,
+    Chengfeng Zhao, Chengwei Ren, Peng Wang, Yuan Liu.
+    &ldquo;GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models&rdquo;.
+    <span class="venue">ECCV 2026 (submission)</span>.
+  </div>
+
+  <div class="pub">
+    Hanzhuo Huang, Qingyang Bao, Zekai Gu, <span class="me">Zhongshuo Du</span>, Cheng Lin, Yuan Liu, Sibei Yang.
+    &ldquo;RefAny3D: 3D Asset-Referenced Diffusion Models for Image Generation&rdquo;.
+    <span class="venue">ICLR 2026</span>.
+  </div>
+
+  <div class="pub">
+    Yuefan Shen, Hongbo Fu, <span class="me">Zhongshuo Du</span>, Xiang Chen, Evgeny Burnaev,
+    Denis Zorin, Kun Zhou, Youyi Zheng.
+    &ldquo;GCN-Denoiser: Mesh Denoising with Graph Convolutional Networks&rdquo;.
+    <span class="venue">ACM Transactions on Graphics, 2022</span>.
+    <span class="plinks"><a href="https://arxiv.org/pdf/2108.05128">[PDF]</a><a href="https://github.com/Jhonve/GCN-Denoiser">[Code]</a></span>
+  </div>
+
+  <!-- ============ Education ============ -->
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="top"><span class="org">Zhejiang University | State Key Lab of CAD&amp;CG (GAPS)</span><span class="time">Sep. 2019 – Mar. 2022</span></div>
+    <div class="role">M.Eng. in Computer Technology</div>
+    <ul>
+      <li>Recommended for admission without entrance exam. Major in CG &amp; CV, advised by Prof. Youyi Zheng and Prof. Kun Zhou.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="top"><span class="org">Zhejiang University</span><span class="time">Sep. 2015 – Jun. 2019</span></div>
+    <div class="role">B.Eng. in Electronic Science and Technology</div>
+  </div>
+
+  <!-- ============ Skills ============ -->
+  <h2>Skills</h2>
+  <table class="skills">
+    <tr><td>Programming</td><td>C++ &middot; Python &middot; JavaScript</td></tr>
+    <tr><td>Deep Learning</td><td>PyTorch &middot; TensorFlow</td></tr>
+    <tr><td>Graphics</td><td>OpenGL &middot; OpenCV &middot; CGAL &middot; Open3D &middot; libigl &middot; Eigen</td></tr>
+    <tr><td>DCC Tools</td><td>Blender &middot; Houdini &middot; ZBrush &middot; Maya &middot; 3ds Max &middot; Substance Painter / Designer</td></tr>
+    <tr><td>Engines</td><td>Unreal Engine &middot; Unity</td></tr>
+    <tr><td>AI Tooling</td><td>Cursor &middot; Trae &middot; OpenClaw</td></tr>
+    <tr><td>Languages</td><td>English &middot; Mandarin</td></tr>
+  </table>
+
+  <!-- ============ Awards ============ -->
+  <h2>Honors &amp; Awards</h2>
+  <ul class="plain">
+    <li>Excellent Postgraduate Student, Zhejiang University, 2022</li>
+    <li>Triple-A Graduate &amp; Award of Honor, 2020 – 2021</li>
+    <li>Outstanding Graduation Thesis, 2019</li>
+    <li>Outstanding Students / Merits / National Talents Training Base Scholarships, 2016 – 2018</li>
+    <li>NOI Provincial Team Member, 2014 &middot; NOIP First Prize, 2013 &middot; Mathematics Olympiad Second Prize, 2014</li>
+  </ul>
+
+  <footer>
+    &copy; 2026 Zhongshuo Du &middot; Last updated Jul. 2026
+  </footer>
+
+</div>
+</body>
+</html>
