@@ -29,6 +29,19 @@
   a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  /* Top navigation */
+  .nav {
+    position: sticky; top: 0; z-index: 10;
+    background: #fdfdfcee; backdrop-filter: blur(4px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav .nav-inner {
+    max-width: 860px; margin: 0 auto; padding: 10px 24px;
+    display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 4px 26px;
+  }
+  .nav a { color: var(--text); font-size: 15px; }
+  .nav a:hover { color: var(--link); text-decoration: none; }
+
   /* Header */
   .header { display: flex; gap: 34px; align-items: flex-start; margin-bottom: 26px; }
   .header img.portrait {
@@ -52,6 +65,7 @@
     font-size: 21px; font-weight: normal;
     border-bottom: 1px solid var(--rule);
     padding-bottom: 6px; margin: 44px 0 18px;
+    scroll-margin-top: 56px;
   }
   h3.group {
     font-size: 16px; color: var(--muted);
@@ -80,11 +94,24 @@
   .entry ul { margin: 6px 0 0; padding-left: 20px; }
   .entry li { margin-bottom: 3px; }
 
-  /* Publications */
-  .pub { margin-bottom: 14px; }
+  /* Publications (Cheng Lin style: image left, text right) */
+  .pub {
+    display: flex; gap: 22px; align-items: center;
+    margin-bottom: 26px;
+  }
+  .pub .pub-img {
+    flex: 0 0 210px; width: 210px;
+  }
+  .pub .pub-img img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--rule); border-radius: 4px; background: #fff;
+  }
+  .pub .pub-text { flex: 1; }
+  .pub .ptitle { font-weight: bold; margin-bottom: 2px; }
   .pub .venue { font-style: italic; }
   .me { font-weight: bold; text-decoration: underline; text-underline-offset: 3px; }
-  .pub .plinks a { margin-right: 8px; font-size: 13px; }
+  .pub .plinks { margin-top: 4px; }
+  .pub .plinks a { margin-right: 10px; font-size: 14px; }
 
   /* Experience timeline (icon on top, text below) */
   .timeline {
@@ -98,11 +125,9 @@
   .tl-org { font-size: 14px; }
   .tl-role { font-size: 13px; color: var(--muted); font-style: italic; }
 
-  /* Awards & skills */
+  /* Awards */
   ul.plain { padding-left: 20px; margin: 0; }
   ul.plain li { margin-bottom: 4px; }
-  .skills td { padding: 2px 16px 2px 0; vertical-align: top; }
-  .skills td:first-child { color: var(--muted); white-space: nowrap; }
 
   footer { margin-top: 60px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 12px; }
 
@@ -111,10 +136,20 @@
     .header .info .email a { display: block; margin: 0 0 4px; }
     .social { justify-content: center; }
     .entry .top { flex-direction: column; }
+    .pub { flex-direction: column; align-items: flex-start; }
+    .pub .pub-img { flex: none; width: 100%; max-width: 320px; }
   }
 </style>
 </head>
 <body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#awards">Awards</a>
+  </div>
+</nav>
 <div class="container">
 
   <!-- ============ Header ============ -->
@@ -135,8 +170,8 @@
           <a href="https://github.com/dosuremaker">GitHub</a>
         </div>
         <div class="social-item">
-          <svg viewBox="0 0 16 16" fill="var(--text)" aria-hidden="true"><path d="M9.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5L9.5 1zM9 5V2l3 3H9zM5 7h6v1H5V7zm0 2.5h6v1H5v-1zM5 12h6v1H5v-1z"/></svg>
-          <a href="files/CV_ZhongshuoDu.pdf">CV</a>
+          <svg viewBox="0 0 640 512" fill="var(--text)" aria-hidden="true"><path d="M623.9 175.9L338.4 55.6c-11.7-4.9-24.9-4.9-36.7 0L16.1 175.9c-21.5 9.1-21.5 39.2 0 48.3L112 264.6v72.7c0 12.2 6.9 23.3 17.8 28.7L307.2 455c8.1 4 17.5 4 25.6 0l177.4-88.9c10.9-5.5 17.8-16.6 17.8-28.7v-72.7l48-20.3v99.7c-6.9 4.3-11.5 11.9-11.5 20.6 0 9 4.9 16.8 12.2 20.9l-10.9 43.6c-2.5 10.1 3.5 18.9 11.5 18.9h44.6c8 0 14.1-8.8 11.5-18.9l-10.9-43.6c7.3-4.1 12.2-11.9 12.2-20.9 0-8.7-4.6-16.3-11.5-20.6V224.1l.7-.3c21.5-9 21.5-39.2 0-48.3zM480 337.3l-160 80.2-160-80.2v-52.4l141.7 59.8c11.7 4.9 24.9 4.9 36.7 0L480 284.9v52.4z"/></svg>
+          <a href="https://scholar.google.com/citations?user=5aI4X-EAAAAJ&amp;hl=zh-CN">Google Scholar</a>
         </div>
       </div>
     </div>
@@ -151,7 +186,7 @@
   </p>
 
   <!-- ============ Projects ============ -->
-  <h2>Selected Projects</h2>
+  <h2 id="projects">Selected Projects</h2>
 
   <h3 class="group">Startup — SynWorld (Co-Founder, 2025 – Present)</h3>
 
@@ -269,7 +304,7 @@
   </div>
 
   <!-- ============ Experience ============ -->
-  <h2>Experience</h2>
+  <h2 id="experience">Experience</h2>
 
   <div class="timeline">
     <div class="tl-item">
@@ -311,59 +346,52 @@
   </div>
 
   <!-- ============ Publications ============ -->
-  <h2>Selected Publications</h2>
+  <h2 id="publications">Selected Publications</h2>
 
   <div class="pub">
-    Zekai Gu, Shuoxuan Feng, Yansong Wang, Hanzhuo Huang, <span class="me">Zhongshuo Du</span>,
-    Chengfeng Zhao, Chengwei Ren, Peng Wang, Yuan Liu.
-    &ldquo;GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models&rdquo;.
-    <span class="venue">ECCV 2026 (submission)</span>.
+    <div class="pub-img"><img src="images/pub_gorenderer.jpg" alt="GO-Renderer teaser"></div>
+    <div class="pub-text">
+      <div class="ptitle">GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models</div>
+      Zekai Gu, Shuoxuan Feng, Yansong Wang, Hanzhuo Huang, <span class="me">Zhongshuo Du</span>,
+      Chengfeng Zhao, Chengwei Ren, Peng Wang, Yuan Liu.
+      <div><span class="venue">ECCV 2026 (submission)</span></div>
+      <div class="plinks">
+        <a href="https://arxiv.org/abs/2603.23246">[Paper]</a>
+        <a href="https://github.com/IGL-HKUST/GO-Renderer">[Code]</a>
+      </div>
+    </div>
   </div>
 
   <div class="pub">
-    Hanzhuo Huang, Qingyang Bao, Zekai Gu, <span class="me">Zhongshuo Du</span>, Cheng Lin, Yuan Liu, Sibei Yang.
-    &ldquo;RefAny3D: 3D Asset-Referenced Diffusion Models for Image Generation&rdquo;.
-    <span class="venue">ICLR 2026</span>.
+    <div class="pub-img"><img src="images/pub_refany3d.jpg" alt="RefAny3D teaser"></div>
+    <div class="pub-text">
+      <div class="ptitle">RefAny3D: 3D Asset-Referenced Diffusion Models for Image Generation</div>
+      Hanzhuo Huang, Qingyang Bao, Zekai Gu, <span class="me">Zhongshuo Du</span>, Cheng Lin, Yuan Liu, Sibei Yang.
+      <div><span class="venue">ICLR 2026</span></div>
+      <div class="plinks">
+        <a href="https://arxiv.org/abs/2601.22094">[Paper]</a>
+        <a href="https://judgementh.github.io/RefAny3D/">[Project Page]</a>
+        <a href="https://github.com/JudgementH/RefAny3D">[Code]</a>
+      </div>
+    </div>
   </div>
 
   <div class="pub">
-    Yuefan Shen, Hongbo Fu, <span class="me">Zhongshuo Du</span>, Xiang Chen, Evgeny Burnaev,
-    Denis Zorin, Kun Zhou, Youyi Zheng.
-    &ldquo;GCN-Denoiser: Mesh Denoising with Graph Convolutional Networks&rdquo;.
-    <span class="venue">ACM Transactions on Graphics, 2022</span>.
-    <span class="plinks"><a href="https://arxiv.org/pdf/2108.05128">[PDF]</a><a href="https://github.com/Jhonve/GCN-Denoiser">[Code]</a></span>
+    <div class="pub-img"><img src="images/pub_gcndenoiser.jpg" alt="GCN-Denoiser results"></div>
+    <div class="pub-text">
+      <div class="ptitle">GCN-Denoiser: Mesh Denoising with Graph Convolutional Networks</div>
+      Yuefan Shen, Hongbo Fu, <span class="me">Zhongshuo Du</span>, Xiang Chen, Evgeny Burnaev,
+      Denis Zorin, Kun Zhou, Youyi Zheng.
+      <div><span class="venue">ACM Transactions on Graphics, 2022</span></div>
+      <div class="plinks">
+        <a href="https://arxiv.org/pdf/2108.05128">[Paper]</a>
+        <a href="https://github.com/Jhonve/GCN-Denoiser">[Code]</a>
+      </div>
+    </div>
   </div>
-
-  <!-- ============ Education ============ -->
-  <h2>Education</h2>
-
-  <div class="entry">
-    <div class="top"><span class="org">Zhejiang University | State Key Lab of CAD&amp;CG (GAPS)</span><span class="time">Sep. 2019 – Mar. 2022</span></div>
-    <div class="role">M.Eng. in Computer Technology</div>
-    <ul>
-      <li>Recommended for admission without entrance exam. Major in CG &amp; CV, advised by Prof. Youyi Zheng and Prof. Kun Zhou.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="top"><span class="org">Zhejiang University</span><span class="time">Sep. 2015 – Jun. 2019</span></div>
-    <div class="role">B.Eng. in Electronic Science and Technology</div>
-  </div>
-
-  <!-- ============ Skills ============ -->
-  <h2>Skills</h2>
-  <table class="skills">
-    <tr><td>Programming</td><td>C++ &middot; Python &middot; JavaScript</td></tr>
-    <tr><td>Deep Learning</td><td>PyTorch &middot; TensorFlow</td></tr>
-    <tr><td>Graphics</td><td>OpenGL &middot; OpenCV &middot; CGAL &middot; Open3D &middot; libigl &middot; Eigen</td></tr>
-    <tr><td>DCC Tools</td><td>Blender &middot; Houdini &middot; ZBrush &middot; Maya &middot; 3ds Max &middot; Substance Painter / Designer</td></tr>
-    <tr><td>Engines</td><td>Unreal Engine &middot; Unity</td></tr>
-    <tr><td>AI Tooling</td><td>Cursor &middot; Trae &middot; OpenClaw</td></tr>
-    <tr><td>Languages</td><td>English &middot; Mandarin</td></tr>
-  </table>
 
   <!-- ============ Awards ============ -->
-  <h2>Honors &amp; Awards</h2>
+  <h2 id="awards">Honors &amp; Awards</h2>
   <ul class="plain">
     <li>Excellent Postgraduate Student, Zhejiang University, 2022</li>
     <li>Triple-A Graduate &amp; Award of Honor, 2020 – 2021</li>
