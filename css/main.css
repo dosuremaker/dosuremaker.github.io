@@ -101,17 +101,18 @@
 
   /* Experience timeline (icon on top, text below) */
   .timeline {
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 24px 8px; margin-top: 22px;
+    display: flex; flex-wrap: nowrap; justify-content: space-between;
+    align-items: flex-start; gap: 0 10px; margin-top: 22px;
   }
-  .tl-item { flex: 1 1 128px; max-width: 160px; text-align: center; }
-  .tl-logo { height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
-  .tl-logo img { max-height: 52px; max-width: 100%; }
-  /* Wide wordmarks: cap by width so they fill the row like the square marks */
-  .tl-logo img.wide { max-height: 44px; max-width: 150px; }
-  .tl-time { font-weight: bold; font-size: 14px; }
-  .tl-org { font-size: 14px; }
-  .tl-role { font-size: 13px; color: var(--muted); font-style: italic; }
+  /* min-width:0 lets items shrink below their longest word so all six stay on one row */
+  .tl-item { flex: 1 1 0; min-width: 0; text-align: center; }
+  .tl-logo { height: 56px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .tl-logo img { max-height: 46px; max-width: 100%; }
+  /* Wide wordmarks read larger at equal height, so cap them tighter */
+  .tl-logo img.wide { max-height: 26px; max-width: 100%; }
+  .tl-time { font-weight: bold; font-size: 13px; }
+  .tl-org { font-size: 13px; line-height: 1.4; }
+  .tl-role { font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.4; }
 
   /* Awards */
   ul.plain { padding-left: 20px; margin: 0; }
@@ -126,4 +127,7 @@
     .entry .top { flex-direction: column; }
     .pub { flex-direction: column; align-items: flex-start; }
     .pub .pub-img { flex: none; width: 100%; max-width: 320px; }
+    /* Six columns are too tight on a phone: wrap to three per row */
+    .timeline { flex-wrap: wrap; justify-content: center; gap: 24px 12px; }
+    .tl-item { flex: 0 0 30%; }
   }
