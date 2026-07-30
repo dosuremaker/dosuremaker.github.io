@@ -107,10 +107,11 @@
     border: 1px solid var(--rule); border-radius: 4px; background: #fff;
   }
   .pub .pub-text { flex: 1; }
-  .pub .ptitle { font-weight: bold; margin-bottom: 2px; }
-  .pub .venue { font-style: italic; }
-  .me { font-weight: bold; text-decoration: underline; text-underline-offset: 3px; }
-  .pub .plinks { margin-top: 4px; }
+  .pub .ptitle { font-weight: bold; margin-bottom: 4px; }
+  .pub .authors { font-size: 14.5px; color: var(--text); }
+  .pub .venue { font-size: 14.5px; font-weight: bold; }
+  .me { font-weight: bold; }
+  .pub .plinks { margin-top: 5px; }
   .pub .plinks a { margin-right: 10px; font-size: 14px; }
 
   /* Experience timeline (icon on top, text below) */
@@ -121,6 +122,8 @@
   .tl-item { flex: 1 1 128px; max-width: 150px; text-align: center; }
   .tl-logo { height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
   .tl-logo img { max-height: 48px; max-width: 100%; }
+  /* Wide wordmarks read small at a shared max-height: give them more room */
+  .tl-logo img.wide { max-height: 30px; max-width: 132px; }
   .tl-time { font-weight: bold; font-size: 14px; }
   .tl-org { font-size: 14px; }
   .tl-role { font-size: 13px; color: var(--muted); font-style: italic; }
@@ -320,13 +323,13 @@
       <div class="tl-role">M.Eng. / Researcher</div>
     </div>
     <div class="tl-item">
-      <div class="tl-logo"><img src="images/tencent.png" alt="Tencent"></div>
+      <div class="tl-logo"><img class="wide" src="images/tencent.png" alt="Tencent"></div>
       <div class="tl-time">2021</div>
       <div class="tl-org">Tencent TiMi</div>
       <div class="tl-role">AI Research Intern</div>
     </div>
     <div class="tl-item">
-      <div class="tl-logo"><img src="images/mihoyo.png" alt="miHoYo"></div>
+      <div class="tl-logo"><img class="wide" src="images/mihoyo.png" alt="miHoYo"></div>
       <div class="tl-time">2022 – 2025</div>
       <div class="tl-org">miHoYo (T1 Graphics)</div>
       <div class="tl-role">Graphics Algorithm Researcher</div>
@@ -352,8 +355,7 @@
     <div class="pub-img"><img src="images/pub_gorenderer.jpg" alt="GO-Renderer teaser"></div>
     <div class="pub-text">
       <div class="ptitle">GO-Renderer: Generative Object Rendering with 3D-aware Controllable Video Diffusion Models</div>
-      Zekai Gu, Shuoxuan Feng, Yansong Wang, Hanzhuo Huang, <span class="me">Zhongshuo Du</span>,
-      Chengfeng Zhao, Chengwei Ren, Peng Wang, Yuan Liu.
+      <div class="authors">Zekai Gu, Shuoxuan Feng, Yansong Wang, Hanzhuo Huang, <span class="me">Zhongshuo Du</span>, Chengfeng Zhao, Chengwei Ren, Peng Wang, Yuan Liu</div>
       <div><span class="venue">ECCV 2026 (submission)</span></div>
       <div class="plinks">
         <a href="https://arxiv.org/abs/2603.23246">[Paper]</a>
@@ -366,7 +368,7 @@
     <div class="pub-img"><img src="images/pub_refany3d.jpg" alt="RefAny3D teaser"></div>
     <div class="pub-text">
       <div class="ptitle">RefAny3D: 3D Asset-Referenced Diffusion Models for Image Generation</div>
-      Hanzhuo Huang, Qingyang Bao, Zekai Gu, <span class="me">Zhongshuo Du</span>, Cheng Lin, Yuan Liu, Sibei Yang.
+      <div class="authors">Hanzhuo Huang, Qingyang Bao, Zekai Gu, <span class="me">Zhongshuo Du</span>, Cheng Lin, Yuan Liu, Sibei Yang</div>
       <div><span class="venue">ICLR 2026</span></div>
       <div class="plinks">
         <a href="https://arxiv.org/abs/2601.22094">[Paper]</a>
@@ -380,8 +382,7 @@
     <div class="pub-img"><img src="images/pub_gcndenoiser.jpg" alt="GCN-Denoiser results"></div>
     <div class="pub-text">
       <div class="ptitle">GCN-Denoiser: Mesh Denoising with Graph Convolutional Networks</div>
-      Yuefan Shen, Hongbo Fu, <span class="me">Zhongshuo Du</span>, Xiang Chen, Evgeny Burnaev,
-      Denis Zorin, Kun Zhou, Youyi Zheng.
+      <div class="authors">Yuefan Shen, Hongbo Fu, <span class="me">Zhongshuo Du</span>, Xiang Chen, Evgeny Burnaev, Denis Zorin, Kun Zhou, Youyi Zheng</div>
       <div><span class="venue">ACM Transactions on Graphics, 2022</span></div>
       <div class="plinks">
         <a href="https://arxiv.org/pdf/2108.05128">[Paper]</a>
