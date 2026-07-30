@@ -10,8 +10,8 @@
 <body>
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
     <a href="#awards">Awards</a>
   </div>
@@ -51,124 +51,6 @@
     <b>Spatial Intelligence &amp; Generative Modeling</b> with scalable engineering solutions.
   </p>
 
-  <!-- ============ Projects ============ -->
-  <h2 id="projects">Selected Projects</h2>
-
-  <h3 class="group">Startup — SynWorld (Co-Founder, 2025 – Present)</h3>
-
-  <div class="project">
-    <div class="title">FizzReel: Controllable Video Reimagine Platform</div>
-    <div class="meta">SynWorld &middot; Jun. 2025 – Feb. 2026</div>
-    <div class="desc">
-      A video replication platform focusing on high-precision camera motion replication,
-      integrating Uni3C technology on the Wan2.2 model. Architected a modular backend workflow
-      based on ComfyUI, supporting automated pipelines from reference video parsing to structured generation.
-    </div>
-    <div class="tags"><span>Wan2.2</span><span>Uni3C</span><span>ComfyUI</span><span>Video Diffusion</span><span>Camera Control</span></div>
-  </div>
-
-  <h3 class="group">Industry — MiHoYo, T1 Graphics Group (2022 – 2025) &amp; Tencent TiMi (2021)</h3>
-
-  <div class="project">
-    <div class="title">Multimodal LLM-driven 3D Scene Layout &amp; Synthesis</div>
-    <div class="meta">MiHoYo &middot; Jan. 2025 – Jun. 2025</div>
-    <div class="desc">
-      Integrated GPT-4V, GroundingDINO, SAM and MoGe for component detection and depth extraction
-      from concept art, generating structured layouts after Manhattan World coordinate alignment.
-      Built a Blender synthesizer via MCP / Python API for automated placement — combining VLM-based
-      asset retrieval, Claude for spatial reasoning, and an AIGC-3D generative fallback —
-      significantly accelerating Level Artist workflows.
-    </div>
-    <div class="tags"><span>GPT-4V</span><span>SAM</span><span>GroundingDINO</span><span>MoGe</span><span>Blender MCP</span><span>Agentic Pipeline</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">AIGC-3D Mesh &amp; Topology Optimization</div>
-    <div class="meta">MiHoYo &middot; Jun. 2024 – Dec. 2024</div>
-    <div class="desc">
-      A patch-based segmentation pipeline using Watershed and Graph-Cut to smooth boundaries of raw
-      meshes generated from concept art via the CLAY model, plus a wireframe interaction tool based on
-      CGAL half-edge structures to produce production-ready quad-dominant meshes.
-    </div>
-    <div class="tags"><span>CLAY</span><span>Graph-Cut</span><span>CGAL</span><span>Quad Meshing</span><span>Geometry Processing</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">3D Stylized Stone Generation System</div>
-    <div class="meta">MiHoYo &middot; Oct. 2022 – Jun. 2024</div>
-    <div class="desc">
-      A multi-view stylized image generation pipeline using LoRA-tuned Stable Diffusion controlled by
-      ControlNet / T2I-Adapter, with an inpainting-based strategy for strict multi-view consistency.
-      Leveraged GANs for precise normal map estimation, and reconstructed high-poly stylized assets via
-      density-adaptive large-steps differentiable rendering with continuous remeshing.
-    </div>
-    <div class="tags"><span>Stable Diffusion</span><span>LoRA</span><span>ControlNet</span><span>Differentiable Rendering</span><span>GAN</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">LOD Visibility Weight and Culling</div>
-    <div class="meta">MiHoYo &middot; Jun. 2022 – Oct. 2022</div>
-    <div class="desc">
-      Enhanced the QEM-based LOD algorithm with visibility weights and culling logic to intelligently
-      control polygon reduction priority for large-scale scenes.
-    </div>
-    <div class="tags"><span>QEM</span><span>LOD</span><span>High-Performance Graphics</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">PCG Scene Generation</div>
-    <div class="meta">Tencent TiMi &middot; Jun. 2021 – Aug. 2021</div>
-    <div class="desc">
-      Graph-based layout generation with transformers for automated indoor scene object placement
-      and orientation.
-    </div>
-    <div class="tags"><span>GNN</span><span>Transformer</span><span>Procedural Generation</span></div>
-  </div>
-
-  <h3 class="group">Academic — State Key Lab of CAD&amp;CG, Zhejiang University</h3>
-
-  <div class="project">
-    <div class="title">Teeth Alignment Prediction in Videos</div>
-    <div class="meta">ZJU &middot; Sep. 2021 – Mar. 2022</div>
-    <div class="desc">
-      U-Net tooth segmentation followed by frame-by-frame pose fitting of 3D orthodontic models;
-      a spatio-temporal VAE-GAN with FlowNet motion warping synthesizes high-fidelity, temporally
-      stable orthodontic preview videos.
-    </div>
-    <div class="tags"><span>VAE-GAN</span><span>FlowNet</span><span>Video Synthesis</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">Single-view 3D Hair Generation</div>
-    <div class="meta">ZJU &middot; Dec. 2020 – Jun. 2021</div>
-    <div class="desc">
-      A Voxel-UNet architecture predicting 3D occupancy and orientation fields from monocular images;
-      polystrip hair models generated by iteratively growing strands along the predicted orientation field.
-    </div>
-    <div class="tags"><span>Voxel-UNet</span><span>Single-view Reconstruction</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">Mesh Reconstruction from Noisy Point Clouds</div>
-    <div class="meta">ZJU &middot; Mar. 2019 – Nov. 2020 &middot; published in ACM TOG</div>
-    <div class="desc">
-      Geometric features extracted via Normal Tensor Voting and converted into graph representations;
-      a GCN cascade-predicts guided normals for iterative vertex updates.
-      Published in <b>ACM Transactions on Graphics</b>.
-    </div>
-    <div class="tags"><span>GCN</span><span>Mesh Denoising</span><span>ACM TOG</span></div>
-  </div>
-
-  <div class="project">
-    <div class="title">Hand Tracking and 3D Scene Interaction</div>
-    <div class="meta">ZJU &middot; Jul. 2018 – Oct. 2018</div>
-    <div class="desc">
-      Real-time hand pose regression from 3D point clouds using PointNet with fingertip refinement;
-      a Unity interaction system for Leap Motion enabling natural hand-to-virtual-scene interaction.
-    </div>
-    <div class="tags"><span>PointNet</span><span>Unity</span><span>Real-time</span></div>
-  </div>
-
   <!-- ============ Experience ============ -->
   <h2 id="experience">Experience</h2>
 
@@ -180,21 +62,21 @@
       <div class="tl-role">B.Eng.</div>
     </div>
     <div class="tl-item">
-      <div class="tl-logo"><img src="source_files/zju.png" alt="SKL of CAD&CG, ZJU"></div>
+      <div class="tl-logo"><img src="source_files/zju.png" alt="State Key Lab of CAD&CG, ZJU"></div>
       <div class="tl-time">2019 – 2022</div>
-      <div class="tl-org">SKL of CAD&amp;CG, ZJU</div>
-      <div class="tl-role">M.Eng. / Researcher</div>
+      <div class="tl-org">CAD&amp;CG Lab, ZJU</div>
+      <div class="tl-role">M.Eng.</div>
     </div>
     <div class="tl-item">
       <div class="tl-logo"><img class="wide" src="source_files/tencent.png" alt="Tencent"></div>
       <div class="tl-time">2021</div>
-      <div class="tl-org">Tencent TiMi</div>
+      <div class="tl-org">Tencent IEG, TiMi Technology Center</div>
       <div class="tl-role">AI Research Intern</div>
     </div>
     <div class="tl-item">
       <div class="tl-logo"><img class="wide" src="source_files/mihoyo.png" alt="miHoYo"></div>
       <div class="tl-time">2022 – 2025</div>
-      <div class="tl-org">miHoYo (T1 Graphics)</div>
+      <div class="tl-org">miHoYo, Entropy Lumi</div>
       <div class="tl-role">Graphics Algorithm Researcher</div>
     </div>
     <div class="tl-item">
@@ -208,6 +90,104 @@
       <div class="tl-time">Present</div>
       <div class="tl-org">Artstrio</div>
       <div class="tl-role">CTO</div>
+    </div>
+  </div>
+
+  <!-- ============ Projects ============ -->
+  <h2 id="projects">Selected Projects</h2>
+
+  <h3 class="group">SynWorld (Co-Founder, 2025)</h3>
+
+  <div class="project">
+    <div class="title">FizzReel: Controllable Video Reimagine Platform</div>
+    <div class="desc">
+      A video replication platform focusing on high-precision camera motion replication,
+      integrating Uni3C technology on the Wan2.2 model. Architected a modular backend workflow
+      based on ComfyUI, supporting automated pipelines from reference video parsing to structured generation.
+    </div>
+  </div>
+
+  <h3 class="group">miHoYo (2022 – 2025) &amp; Tencent (2021)</h3>
+
+  <div class="project">
+    <div class="title">Multimodal LLM-driven 3D Scene Layout &amp; Synthesis</div>
+    <div class="desc">
+      Integrated GPT-4V, GroundingDINO, SAM and MoGe for component detection and depth extraction
+      from concept art, generating structured layouts after Manhattan World coordinate alignment.
+      Built a Blender synthesizer via MCP / Python API for automated placement — combining VLM-based
+      asset retrieval, Claude for spatial reasoning, and an AIGC-3D generative fallback —
+      significantly accelerating Level Artist workflows.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">AIGC-3D Mesh &amp; Topology Optimization</div>
+    <div class="desc">
+      A patch-based segmentation pipeline using Watershed and Graph-Cut to smooth boundaries of raw
+      meshes generated from concept art via the CLAY model, plus a wireframe interaction tool based on
+      CGAL half-edge structures to produce production-ready quad-dominant meshes.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">3D Stylized Stone Generation System</div>
+    <div class="desc">
+      A multi-view stylized image generation pipeline using LoRA-tuned Stable Diffusion controlled by
+      ControlNet / T2I-Adapter, with an inpainting-based strategy for strict multi-view consistency.
+      Leveraged GANs for precise normal map estimation, and reconstructed high-poly stylized assets via
+      density-adaptive large-steps differentiable rendering with continuous remeshing.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">LOD Visibility Weight and Culling</div>
+    <div class="desc">
+      Enhanced the QEM-based LOD algorithm with visibility weights and culling logic to intelligently
+      control polygon reduction priority for large-scale scenes.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">PCG Scene Generation</div>
+    <div class="desc">
+      Graph-based layout generation with transformers for automated indoor scene object placement
+      and orientation.
+    </div>
+  </div>
+
+  <h3 class="group">CAD&amp;CG Lab, Zhejiang University</h3>
+
+  <div class="project">
+    <div class="title">Teeth Alignment Prediction in Videos</div>
+    <div class="desc">
+      U-Net tooth segmentation followed by frame-by-frame pose fitting of 3D orthodontic models;
+      a spatio-temporal VAE-GAN with FlowNet motion warping synthesizes high-fidelity, temporally
+      stable orthodontic preview videos.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">Single-view 3D Hair Generation</div>
+    <div class="desc">
+      A Voxel-UNet architecture predicting 3D occupancy and orientation fields from monocular images;
+      polystrip hair models generated by iteratively growing strands along the predicted orientation field.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">Mesh Reconstruction from Noisy Point Clouds</div>
+    <div class="desc">
+      Geometric features extracted via Normal Tensor Voting and converted into graph representations;
+      a GCN cascade-predicts guided normals for iterative vertex updates.
+      Published in <b>ACM Transactions on Graphics</b>.
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="title">Hand Tracking and 3D Scene Interaction</div>
+    <div class="desc">
+      Real-time hand pose regression from 3D point clouds using PointNet with fingertip refinement;
+      a Unity interaction system for Leap Motion enabling natural hand-to-virtual-scene interaction.
     </div>
   </div>
 

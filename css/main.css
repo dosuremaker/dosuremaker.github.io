@@ -66,16 +66,9 @@
   }
 
   /* Projects */
-  .project { margin-bottom: 20px; }
+  .project { margin-bottom: 16px; }
   .project .title { font-weight: bold; }
-  .project .meta { color: var(--muted); font-size: 14px; }
-  .project .desc { margin: 4px 0 4px; }
-  .tags { font-size: 13px; color: var(--muted); }
-  .tags span {
-    display: inline-block; border: 1px solid var(--rule);
-    border-radius: 3px; padding: 0 6px; margin: 2px 4px 2px 0;
-    background: #f7f7f5;
-  }
+  .project .desc { margin: 2px 0 0; }
 
   /* Experience / Education */
   .entry { margin-bottom: 16px; }
@@ -111,11 +104,11 @@
     display: flex; flex-wrap: wrap; justify-content: center;
     gap: 24px 8px; margin-top: 22px;
   }
-  .tl-item { flex: 1 1 128px; max-width: 150px; text-align: center; }
+  .tl-item { flex: 1 1 128px; max-width: 160px; text-align: center; }
   .tl-logo { height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
-  .tl-logo img { max-height: 48px; max-width: 100%; }
-  /* Wide wordmarks read small at a shared max-height: give them more room */
-  .tl-logo img.wide { max-height: 30px; max-width: 132px; }
+  .tl-logo img { max-height: 52px; max-width: 100%; }
+  /* Wide wordmarks: cap by width so they fill the row like the square marks */
+  .tl-logo img.wide { max-height: 44px; max-width: 150px; }
   .tl-time { font-weight: bold; font-size: 14px; }
   .tl-org { font-size: 14px; }
   .tl-role { font-size: 13px; color: var(--muted); font-style: italic; }
