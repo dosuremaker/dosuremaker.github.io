@@ -106,8 +106,8 @@
   }
   /* min-width:0 lets items shrink below their longest word so all six stay on one row */
   .tl-item { flex: 1 1 0; min-width: 0; text-align: center; }
-  .tl-logo { height: 56px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
-  .tl-logo img { max-height: 46px; max-width: 100%; }
+  .tl-logo { height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .tl-logo img { max-height: 54px; max-width: 100%; }
   /* Wide wordmarks read larger at equal height, so cap them tighter;
      the width cap keeps them from filling the column edge-to-edge */
   .tl-logo img.wide { max-height: 26px; max-width: 78%; }
